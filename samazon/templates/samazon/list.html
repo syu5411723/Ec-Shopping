@@ -1,0 +1,25 @@
+{% extends 'samazon/home.html' %}
+{% load static %}
+
+{% block products %}
+
+{% for item in post_list %}
+<li class="span3">
+            <div class="thumbnail">
+                <a href="{% url 'samazon:post_detail' item.pk %}"><img
+                        src="{{ item.thumbnail.url }}"></a>
+                <div class="caption">
+                    <h5>{{ item.name }}</h5>
+                    <p>
+                        {{ item.content }}
+                    </p>
+
+                    <h4 style="text-align:center"><a class="btn" href="{% url 'samazon:post_detail' item.pk %}"> <i
+                                class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
+                                class="icon-shopping-cart"></i></a>
+                        <a class="btn btn-primary" href="#">$ {{ item.price }}</a></h4>
+                </div>
+            </div>
+        </li>
+{% endfor %}
+{% endblock %}

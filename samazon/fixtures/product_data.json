@@ -1,0 +1,62 @@
+[
+    {
+        "model": "samazon.Post",
+        "pk": 1,
+        "fields": {
+            "name": "SDカード",
+            "price": 50.0,
+            "content": "8GBのSDカードです。",
+            "thumbnail": "6.jpg"
+        }
+    },
+    {
+        "model": "samazon.Post",
+        "pk": 2,
+        "fields": {
+            "name": "USBスティック",
+            "price": 10.0,
+            "content": "SDカードは含みません。",
+            "thumbnail": "7.jpg"
+        }
+    },
+    {
+        "model": "samazon.Post",
+        "pk": 3,
+        "fields": {
+            "name": "SDカード",
+            "price": 80.0,
+            "content": "16GのSDカードです。",
+            "thumbnail": "8.jpg"
+        }
+    },
+    {
+        "model": "samazon.Post",
+        "pk": 4,
+        "fields": {
+            "name": "デジタル一眼セット",
+            "price": 1000.0,
+            "content": "一式のセットです。",
+            "thumbnail": "9.jpg"
+        }
+    },
+    {
+        "model": "samazon.Post",
+        "pk": 5,
+        "fields": {
+            "name": "SDカード",
+            "price": 50.0,
+            "content": "色違いのSDカードです。",
+            "thumbnail": "10.jpg"
+        }
+    },
+    {
+        "model": "samazon.Post",
+        "pk": 6,
+        "fields": {
+            "name": "デジタル一眼",
+            "price": 900.0,
+            "content": "カメラのみです。",
+            "thumbnail": "11.jpg"
+        }
+    }
+]

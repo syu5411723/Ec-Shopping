@@ -17,6 +17,10 @@ RUN apk update \
     && pip install psycopg2 \
     && apk del build-deps
 
+RUN apk add --virtual build-tools gcc python3-dev musl-dev jpeg-dev zlib-dev \
+    && apk add postgresql-dev
+    && pip install pillow
+
 # Pipenvをインストール
 RUN pip install --upgrade pip \
 && pip install pipenv
