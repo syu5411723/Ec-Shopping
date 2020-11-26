@@ -1,5 +1,5 @@
 # 公式からpython3.7 on alpine linuxイメージをpull
-FROM python:3.7-alpine
+FROM python:3.8-alpine
 
 # 作業ディレクトリを設定
 WORKDIR /usr/src/app
@@ -18,7 +18,7 @@ RUN apk update \
     && apk del build-deps
 
 RUN apk add --virtual build-tools gcc python3-dev musl-dev jpeg-dev zlib-dev \
-    && apk add postgresql-dev
+    && apk add postgresql-dev \
     && pip install pillow
 
 # Pipenvをインストール
@@ -38,4 +38,4 @@ COPY ./entrypoint.sh /usr/src/app/entrypoint.sh
 COPY . /usr/src/app/
 
 # entrypoint.shを実行
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+ENTRYPOINT ["/usr/src/app/entrypointsh"]
